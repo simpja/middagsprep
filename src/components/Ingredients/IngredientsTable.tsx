@@ -1,28 +1,11 @@
 import styled from "styled-components";
+import { IngredientType } from "../../recipes/types";
 
-interface Ingredient {
-  mengde: string;
-  navn: string;
-}
+type Props = {
+  ingredients: IngredientType[];
+};
 
-const ingredients: Ingredient[] = [
-  { mengde: "1 stk", navn: "løk" },
-  { mengde: "1 stk", navn: "Gul løk" },
-  { mengde: "2 fedd", navn: "Hvitløk" },
-  { mengde: "0,5 stk", navn: "Stangselleri" },
-  { mengde: "2 stk", navn: "Gulrøtter" },
-  { mengde: "4 ss", navn: "Olivenolje" },
-  { mengde: "2 stk", navn: "Grønnsakbuljong terninger" },
-  { mengde: "400 g", navn: "Tomater hakkede" },
-  { mengde: "2 ss", navn: "Ketchup" },
-  { mengde: "400 g", navn: "spaghetti" },
-  { mengde: "1 dl", navn: "Kremfløte" },
-  { mengde: "360 g", navn: "røde linser" },
-  { mengde: "1 ts", navn: "havsalt" },
-  { mengde: "1 ts", navn: "kvernet pepper" },
-];
-
-export const IngredientsTable = () => {
+export const IngredientsTable = (props: Props) => {
   return (
     <>
       <StyledTable>
@@ -33,10 +16,10 @@ export const IngredientsTable = () => {
           </tr>
         </thead>
         <tbody>
-          {ingredients.map((ingredient) => (
-            <tr key={ingredient.navn}>
-              <MengdeCelle>{ingredient.mengde}</MengdeCelle>
-              <td>{ingredient.navn}</td>
+          {props.ingredients.map((ingredient) => (
+            <tr key={ingredient.name}>
+              <MengdeCelle>{`${ingredient.amount} ${ingredient.unit}`}</MengdeCelle>
+              <td>{ingredient.name}</td>
             </tr>
           ))}
         </tbody>

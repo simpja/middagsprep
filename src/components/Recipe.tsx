@@ -1,31 +1,31 @@
 import styled from "styled-components";
 import { IngredientsTable } from "./Ingredients/IngredientsTable";
-import { TaskDescription } from "./TaskDescription";
-import gronnsaksbolognese from "../gronnsaksbolognese_dallE.png";
+import { Instructions } from "./Instructions";
+import { RecipeType } from "../recipes/types";
 
-export const Recipe = () => {
+type Props = {
+  recipe: RecipeType;
+};
+
+export const Recipe = (props: Props) => {
   return (
     <>
       <StyledHeader>
         <StyledImage
-          src={gronnsaksbolognese}
-          alt="bilde av grønnsaksbolognese"
+          src={props.recipe.image}
+          alt={`bilde av ${props.recipe.name}`}
         />
-        <Title>Grønnsaksbolognese</Title>
+        <Title>{props.recipe.name}</Title>
         <TagArray>
-          <Tag>Enkel</Tag>
-          <Tag>25 min</Tag>
-          <Tag>Delvis prep</Tag>
+          {props.recipe.tags.map((tag) => (
+            <Tag>{tag}</Tag>
+          ))}
         </TagArray>
       </StyledHeader>
       <RecipeContainer>
-        <Description>
-          En klassiker og favoritt for mange! Her har vi laget en kjøttfri
-          variant basert på mange av de samme smakene. Kjøttdeig er byttet ut
-          med røde linser som er fulle av protein, kostfiber og jern.
-        </Description>
-        <IngredientsTable />
-        <TaskDescription />
+        <Description>{props.recipe.description}</Description>
+        <IngredientsTable ingredients={props.recipe.ingredients} />
+        <Instructions instructions={props.recipe.instructions} />
       </RecipeContainer>
     </>
   );

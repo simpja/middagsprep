@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { Recipe } from "./components/Recipe";
+import { gronnsaksbolognese } from "./recipes/gronnsaksbolognese";
 
 function App() {
   return (
     <Main>
-      <Recipe />
+      <Recipe recipe={gronnsaksbolognese} />
     </Main>
   );
 }
