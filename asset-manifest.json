@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/middagsprep/static/js/main.ff065ba9.js",
+    "static/js/787.ffc9cc4f.chunk.js": "/middagsprep/static/js/787.ffc9cc4f.chunk.js",
+    "static/media/gronnsaksbolognese_dallE.png": "/middagsprep/static/media/gronnsaksbolognese_dallE.478a15b1b80b39a23cba.png",
+    "index.html": "/middagsprep/index.html",
+    "main.ff065ba9.js.map": "/middagsprep/static/js/main.ff065ba9.js.map",
+    "787.ffc9cc4f.chunk.js.map": "/middagsprep/static/js/787.ffc9cc4f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.ff065ba9.js"
+  ]
+}
