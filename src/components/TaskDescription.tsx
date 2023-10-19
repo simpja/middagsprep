@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Oppskrift = () => {
+export const TaskDescription = () => {
   const items = [
     "Vask, rens og finhakk løk, hvitløk, stangselleri og gulrot. Varm opp en gryte med litt olje til middels varme og tilsett grønnsakene. Fres til de blir blanke.",
     "Knus buljongterning og ha i gryten med hermetiske tomater og ketchup. La det småkoke i ca. 10 minutter.",
