@@ -1,5 +1,5 @@
 import { RecipeType } from "./types";
-import gronnsaksbologneseImage from "../assets/images/gronnsaksbolognese_dallE.png";
+import gronnsaksbologneseImage from "../assets/images/gronnsaksbolognese.png";
 
 export const gronnsaksbolognese: RecipeType = {
   id: 1,
