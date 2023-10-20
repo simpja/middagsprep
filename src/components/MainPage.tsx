@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import FrontImage from "../assets/images/frontImage.png";
-import Logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import { gronnsaksbolognese } from "../recipes/gronnsaksbolognese";
 import { kyllingform } from "../recipes/kyllingform";
@@ -12,10 +11,6 @@ export const MainPage = () => {
     <MainContainer>
       <StyledHeader>
         <StyledImage src={FrontImage} alt={`bilde av preppa mat`} />
-        <TitleWithLogo>
-          <img src={Logo} alt="Middagsprep logo" />
-          <h1>Middagsprep</h1>
-        </TitleWithLogo>
         <h2>sida som hjelper deg å lette tidspresset om ettermiddan'</h2>
         <TagArray>
           <Tag>Preppa mat</Tag>
@@ -83,20 +78,6 @@ const StyledImage = styled.img`
   max-width: 50%;
   @media screen and (max-width: 768px) {
     max-width: 80%;
-  }
-`;
-
-const TitleWithLogo = styled.div`
-  display: flex;
-  align-items: center;
-
-  h1 {
-    margin: 0 0 0 10px;
-  }
-
-  img {
-    border-radius: 50%;
-    height: 2em;
   }
 `;
 
