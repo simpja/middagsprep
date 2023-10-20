@@ -7,7 +7,6 @@ export const gronnsaksbolognese: RecipeType = {
   description:
     "En klassiker og favoritt for mange! Her har vi laget en kjøttfri variant basert på mange av de samme smakene. Kjøttdeig er byttet ut med røde linser som er fulle av protein, kostfiber og jern.",
   ingredients: [
-    { amount: 1, unit: "stk", name: "løk" },
     { amount: 1, unit: "stk", name: "Gul løk" },
     { amount: 2, unit: "fedd", name: "Hvitløk" },
     { amount: 0.5, unit: "stk", name: "Stangselleri" },
