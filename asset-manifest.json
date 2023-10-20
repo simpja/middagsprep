@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.js": "/middagsprep/static/js/main.a7c0f8a7.js",
+    "main.js": "/middagsprep/static/js/main.55f69953.js",
     "static/js/787.ffc9cc4f.chunk.js": "/middagsprep/static/js/787.ffc9cc4f.chunk.js",
-    "static/media/gronnsaksbolognese_dallE.png": "/middagsprep/static/media/gronnsaksbolognese_dallE.478a15b1b80b39a23cba.png",
+    "static/media/kyllingform.png": "/middagsprep/static/media/kyllingform.b30e449f7dc7ec73529f.png",
+    "static/media/frontImage.png": "/middagsprep/static/media/frontImage.fc332f9c13d9e3d0d853.png",
+    "static/media/gronnsaksbolognese.png": "/middagsprep/static/media/gronnsaksbolognese.478a15b1b80b39a23cba.png",
+    "static/media/logo.png": "/middagsprep/static/media/logo.8c1bb231841aada172a7.png",
     "index.html": "/middagsprep/index.html",
-    "main.a7c0f8a7.js.map": "/middagsprep/static/js/main.a7c0f8a7.js.map",
+    "main.55f69953.js.map": "/middagsprep/static/js/main.55f69953.js.map",
     "787.ffc9cc4f.chunk.js.map": "/middagsprep/static/js/787.ffc9cc4f.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.a7c0f8a7.js"
+    "static/js/main.55f69953.js"
   ]
 }
