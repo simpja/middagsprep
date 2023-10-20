@@ -3,27 +3,25 @@ import { Recipe } from "./components/Recipe";
 import { gronnsaksbolognese } from "./recipes/gronnsaksbolognese";
 import { kyllingform } from "./recipes/kyllingform";
 import { MainPage } from "./components/MainPage";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
-const router = createBrowserRouter([
-  {
-    path: "/middagsprep",
-    element: <MainPage />,
-  },
-  {
-    path: `/middagsprep/${gronnsaksbolognese.name}`,
-    element: <Recipe recipe={gronnsaksbolognese} />,
-  },
-  {
-    path: `/middagsprep/${kyllingform.name}`,
-    element: <Recipe recipe={kyllingform} />,
-  },
-]);
+import { Route, Routes } from "react-router-dom";
+import { UniversalHeader } from "./components/UniversalHeader";
 
 function App() {
   return (
     <Main>
-      <RouterProvider router={router} />
+      <UniversalHeader />
+      <Routes>
+        <Route path="/middagsprep/" element={<MainPage />} />
+        <Route path="/" element={<MainPage />} />
+        <Route
+          path={`/middagsprep/${gronnsaksbolognese.name}`}
+          element={<Recipe recipe={gronnsaksbolognese} />}
+        />
+        <Route
+          path={`/middagsprep/${kyllingform.name}`}
+          element={<Recipe recipe={kyllingform} />}
+        />
+      </Routes>
     </Main>
   );
 }
