@@ -7,15 +7,15 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/middagsprep",
     element: <MainPage />,
   },
   {
-    path: `/${gronnsaksbolognese.name}`,
+    path: `/middagsprep/${gronnsaksbolognese.name}`,
     element: <Recipe recipe={gronnsaksbolognese} />,
   },
   {
-    path: "/kyllingform",
+    path: `/middagsprep/${kyllingform.name}`,
     element: <Recipe recipe={kyllingform} />,
   },
 ]);
