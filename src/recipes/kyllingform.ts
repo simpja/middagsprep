@@ -1,4 +1,5 @@
 import { RecipeType } from "./types";
+import kyllingformImage from "../assets/images/kyllingform.png";
 
 export const kyllingform: RecipeType = {
   id: 2,
@@ -27,6 +28,6 @@ export const kyllingform: RecipeType = {
     "Ha over marinaden og sett formen tilbake i ovnen i 20 minutter.",
     "Server!",
   ],
-  image: "",
+  image: kyllingformImage,
   tags: ["Enkel", "30 min", "Klar til steking"],
 };
