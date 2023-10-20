@@ -27,7 +27,7 @@ export const MainPage = () => {
           </RecipeLink>
         ))}
       </RecipeList>
-      <RecipeContainer>
+      <ContentsContainer>
         <Description>
           <SubHeader>Hva er Middagsprep?</SubHeader>
           Middagsprep hjelper deg med oppskrifter som kan gjøres helt eller
@@ -49,12 +49,12 @@ export const MainPage = () => {
           med Middagsprep er å avlaste en av de trangeste delene av hverdagen
           ved å flytte noen oppgaver til mindre trange deler av dagen.
         </Description>
-      </RecipeContainer>
+      </ContentsContainer>
     </MainContainer>
   );
 };
 
-const MainContainer = styled.div`
+export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: papayawhip;
@@ -81,19 +81,19 @@ const StyledImage = styled.img`
   }
 `;
 
-const TagArray = styled.div`
+export const TagArray = styled.div`
   display: flex;
   gap: 10px;
 `;
 
-const Tag = styled.p`
+export const Tag = styled.p`
   background-color: gray;
   color: white;
   padding: 10px;
   border-radius: 30px;
 `;
 
-const RecipeContainer = styled.div`
+export const ContentsContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;

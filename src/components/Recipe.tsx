@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { IngredientsTable } from "./Ingredients/IngredientsTable";
 import { Instructions } from "./Instructions";
 import { RecipeType } from "../recipes/types";
+import { ContentsContainer, MainContainer, Tag, TagArray } from "./MainPage";
 
 type Props = {
   recipe: RecipeType;
@@ -9,7 +10,7 @@ type Props = {
 
 export const Recipe = (props: Props) => {
   return (
-    <>
+    <MainContainer>
       <StyledHeader>
         <StyledImage
           src={props.recipe.image}
@@ -22,12 +23,12 @@ export const Recipe = (props: Props) => {
           ))}
         </TagArray>
       </StyledHeader>
-      <RecipeContainer>
+      <ContentsContainer>
         <Description>{props.recipe.description}</Description>
         <IngredientsTable ingredients={props.recipe.ingredients} />
         <Instructions instructions={props.recipe.instructions} />
-      </RecipeContainer>
-    </>
+      </ContentsContainer>
+    </MainContainer>
   );
 };
 
@@ -35,7 +36,7 @@ const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 0 20px 0;
+  padding: 20px 0 20px 0;
 `;
 
 const StyledImage = styled.img`
@@ -50,27 +51,6 @@ const StyledImage = styled.img`
 const Title = styled.h1`
   text-align: center;
   margin: 0;
-`;
-
-const TagArray = styled.div`
-  display: flex;
-  gap: 10px;
-`;
-
-const Tag = styled.p`
-  background-color: gray;
-  color: white;
-  padding: 10px;
-  border-radius: 30px;
-`;
-
-const RecipeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0 300px;
-  @media screen and (max-width: 1024px) {
-    margin: 0 20px;
-  }
 `;
 
 const Description = styled.div`
